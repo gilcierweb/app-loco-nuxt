@@ -1,7 +1,7 @@
 # App Loco Framework Rust with Nuxt
 ## App build with Rust Lang and Nuxt.js. Api Rust with Loco.rs and frontend with nuxt.js using vue.js.
 
-### Loco.rs It’s Like [Ruby on Rails](https://rubyonrails.org/), but for [Rust Lang](https://www.rust-lang.org/). 
+### [Loco.rs](https://loco.rs/) It’s Like [Ruby on Rails](https://rubyonrails.org/), but for [Rust Lang](https://www.rust-lang.org/). 
 
 ### Skill
 
