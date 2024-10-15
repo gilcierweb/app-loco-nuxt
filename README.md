@@ -16,8 +16,8 @@
 
 ```shell
 cd app_loco/
-cargo run
-# run localhost:8080
+cargo loco start
+# run localhost:5150
 
 ```
 
@@ -35,9 +35,9 @@ yarn dev --open
 ```shell
 
 docker-compose build
-docker-compose up # run app-loco http://localhost:8080 app-nuxt http://localhost:3000
+docker-compose up # run app-loco http://localhost:5150 app-nuxt http://localhost:3000
 
-docker-compose up --build # run app-loco http://localhost:8080 app-nuxt http://localhost:3000
+docker-compose up --build # run app-loco http://localhost:5150 app-nuxt http://localhost:3000
 
 # Run diesel migration for create all tables migrations on database
 docker-compose run --rm app ./diesel migration run  # Or
@@ -54,7 +54,7 @@ docker-compose run --rm app /bin/bash
 # App Loco Rust individual
 docker-compose build app-loco
 docker-compose run --rm app-loco
-# run http://0.0.0.0:8080
+# run http://0.0.0.0:5150
 
 # App Nuxt individual
 docker-compose build app-nuxt
