@@ -1,14 +1,15 @@
 <template>
   <v-container>
         <h1>Show Post Page</h1>
+        <h1>{{ status }}</h1>
         <v-row>
 
-            <v-col align="center" :cols="12" align-self="center" v-if="pending">
+            <v-col align="center" :cols="12" align-self="center" v-if="status === 'pending'">
                 Loading ... <br>
                 <v-progress-circular indeterminate :size="200" model-value="20"></v-progress-circular>
             </v-col>
             <v-col v-else cols="12">
-                <v-img height="400px" src="https://source.unsplash.com/random/400×400" cover></v-img>
+                <v-img height="400px" src="https://via.assets.so/game.png?id=1&q=95&w=400&h=400&fit=fill" cover></v-img>
                 <h2>{{ post?.title }}</h2>
                 <p>{{ post?.content }}</p>
                 <p>{{ post?.status }}</p>
@@ -35,7 +36,7 @@ interface Post {
     status: boolean;
 }
 
-const { data: post, pending } = await useLazyFetch<Post>(`${config.public.baseURL}/api/posts/${id}`);
+const {status, data: post } = await useLazyFetch<Post>(`${config.public.baseURL}/api/posts/${id}`);
 </script>
 
 <style scoped>

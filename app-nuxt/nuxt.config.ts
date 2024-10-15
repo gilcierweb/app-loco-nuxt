@@ -37,5 +37,10 @@ export default defineNuxtConfig({
       ApiRustBaseUrl:'',
       baseURL: process.env.NUXT_BASE_URL || 'http://localhost:5150' // Exposed to the frontend as well.
    }
+  },
+  routeRules: {
+    '/api/**': {
+        proxy: { to: "http://localhost:5150/v1/**", },
+    }
   }
 });

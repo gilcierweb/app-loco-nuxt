@@ -21,6 +21,20 @@ server:
   # The UI hostname or IP address that mailers will point to.
   host: http://localhost
 
+  middlewares:
+    cors:
+      enable: true
+      allow_origins: 
+        - http://localhost:3000
+        - http://localhost:3001
+        - http://localhost:3002
+      allow_headers: 
+    compression:
+      enable: true
+    
+
+  
+
 # Worker Configuration
 workers:
   # specifies the worker mode. Options:
@@ -44,6 +58,7 @@ mailer:
     # auth:
     #   user:
     #   password:
+  
 
 # Initializers Configuration
 # initializers:
